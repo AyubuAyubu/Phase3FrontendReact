@@ -13,8 +13,8 @@ const Sidebar = ({children}) => {
       icon: <FaTh />,
     },
     {
-      path: "/about",
-      name: "About",
+      path: "/home",
+      name: "Home",
       icon: <FaUserAlt />,
     },
     {
