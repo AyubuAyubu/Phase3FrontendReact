@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import About from "./pages/About";
+import Home from "./pages/Home";
 import Customer from "./pages/Customer";
 import Dog from "./pages/Dog";
 import DogList from "./pages/DogList";
@@ -15,7 +15,7 @@ const App = () => {
       <Sidebar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/customer" element={<Customer />} />
           <Route path="/review" element={<Review />} />
