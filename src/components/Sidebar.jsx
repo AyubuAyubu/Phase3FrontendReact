@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {NavLink} from "react-router-dom"
-import {FaTh,FaBars,FaCommentAlt,FaShoppingBag,FaThList,FaUserAlt} from "react-icons/fa"
+import {FaTh,FaBars,FaShoppingBag,FaUserAlt} from "react-icons/fa"
 
 const Sidebar = ({children}) => {
   const[isOpen,setIsOpen]=useState(false)
@@ -8,35 +8,27 @@ const Sidebar = ({children}) => {
 
   const menuItem = [
     {
-      path: "/",
-      name: "Dashboard",
-      icon: <FaTh />,
-    },
-    {
       path: "/home",
       name: "Home",
       icon: <FaUserAlt />,
     },
     {
-      path: "/customer",
-      name: "Customer",
+      path: "/",
+      name: "Dashboard",
+      icon: <FaTh />,
+    },
+
+    {
+      path: "/student",
+      name: "Student",
       icon: <FaUserAlt />,
     },
     {
-      path: "/review",
-      name: "Review",
-      icon: <FaCommentAlt />,
-    },
-    {
-      path: "/dog",
-      name: "Dog",
+      path: "/course",
+      name: "Course",
       icon: <FaShoppingBag />,
     },
-    {
-      path: "/dogList",
-      name: "Dog List",
-      icon: <FaThList />,
-    },
+
   ];
 
   return (
@@ -44,7 +36,7 @@ const Sidebar = ({children}) => {
       <div style={{ width: isOpen ? "250px" : "50px" }} className="sidebar">
         <div className="top_section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
-            DogINN
+            xContact
           </h1>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <FaBars onClick={toggle} />
