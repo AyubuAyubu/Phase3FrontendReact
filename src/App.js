@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-import Customer from "./pages/Customer";
-import Dog from "./pages/Dog";
-import DogList from "./pages/DogList";
-import Review from "./pages/Review";
+import Student from "./pages/Student";
+import Course from "./pages/Course";
+
+
 
 const App = () => {
   return (
@@ -17,10 +17,8 @@ const App = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/home" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/customer" element={<Customer />} />
-          <Route path="/review" element={<Review />} />
-          <Route path="/dog" element={<Dog />} />
-          <Route path="/dogList" element={<DogList />} />
+          <Route path="/student" element={<Student />} />
+          <Route path="/course" element={<Course />} />
         </Routes>
       </Sidebar>
     </BrowserRouter>
