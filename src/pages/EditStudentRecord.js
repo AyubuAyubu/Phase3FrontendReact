@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Student = () => {
-  const [formdata, setFormData] = useState(
+const EditStudentRecord = () => {
+    const navigate = useNavigate()
+    const location=useLocation()
+    const {a}=location.state
+    const [formdata, setFormData] = useState(
     {
-      name:"",
-      adm_no:"",
-      course_id:"",
-      class_name:"",
-      email:""
+      name:a.name,
+      adm_no:a.adm_no,
+      course_id:a.course_id,
+      class_name:a.class_name,
+      email:a.email
     }
   )
   function handleChange(e){
@@ -16,9 +20,9 @@ const Student = () => {
   function handleSubmit(e){
     e.preventDefault()
     // console.log(JSON.stringify(formdata))
-    fetch('http://localhost:9292/students',
+    fetch(`http://localhost:9292/students/${a.id}`,
       {
-        method:"POST",
+        method:"PATCH",
         headers:{
           "Content-Type":"application/json",
           "Application":"application/json"
@@ -27,13 +31,13 @@ const Student = () => {
 }
       )
       .then(res=>res.json())
-      .then(data=>console.log(data))
+      .then(data=>navigate("/"))
       .catch(console.error)
   }
   return (
     
     <div className="form">
-    <h2>Register new student</h2>
+    <h2>Edit student details</h2>
     <div className="container">
         <form id="student-form" onSubmit={handleSubmit}>
             <label for="name">Student name</label>
@@ -51,11 +55,11 @@ const Student = () => {
             <label for="name">Email</label>
             <input type="email" id="email" name="email" value={formdata.email} onChange={handleChange}/>
 
-            <button id="btn" type="submit">Register Student</button>
+            <button id="btn" type="submit">Edit Student</button>
         </form>
     </div>
     </div>
     
   );
 };
-export default Student;
+export default EditStudentRecord;
