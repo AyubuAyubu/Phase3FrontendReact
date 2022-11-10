@@ -35,7 +35,7 @@ const EditStudentRecord = () => {
       .catch(console.error)
   }
   return (
-    
+    <div className="studentbackground2">
     <div className="form">
     <h2>Edit student details</h2>
     <div className="container">
@@ -57,6 +57,7 @@ const EditStudentRecord = () => {
 
             <button id="btn" type="submit">Edit Student</button>
         </form>
+    </div>
     </div>
     </div>
     

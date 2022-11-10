@@ -1,13 +1,25 @@
 import React from "react";
 import {Link}from "react-router-dom"
 
+
+
 const Dashboard = ({students}) => {
-  function editItem(e){
-    console.log(e)
+
+  function handleDelete(id){
+    fetch(`http://localhost:9292/students/${id}`,
+      {
+        method:"DELETE",
+      
+}
+      )
+      .then(res=>res.json())
+      .then(()=>alert("deleted"))
+      .catch(console.error)
+  
   }
   return (
     <div className="ml-10">
-    <h1 className="text-[44px] text-[#8F6107]">List of all the Students</h1>
+    <h1>List of all the Students</h1>
       <table>
         <tr>
           <th>No</th>
@@ -28,8 +40,8 @@ const Dashboard = ({students}) => {
           <td className='px-10'>{a.adm_no}</td>
           <td className='px-10'>{a.course_id}</td>
           <td className='px-10'>{a.class_name}</td>
-          <td><Link to="/edit"state={{a}}><button>Edit</button></Link></td>
-          <td><button>Delete</button></td>
+          <td><Link to="/edit"state={{a}}><i class="fa fa-edit" id="fa2" ></i></Link></td>
+          <td> <i className="fa fa-trash-o" id="fa" onClick={()=>handleDelete(a.id)}></i></td>
         </tr>
             )
           })}

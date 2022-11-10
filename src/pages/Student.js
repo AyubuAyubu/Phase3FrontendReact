@@ -31,7 +31,7 @@ const Student = () => {
       .catch(console.error)
   }
   return (
-    
+    <div className="studentbackground">
     <div className="form">
     <h2>Register new student</h2>
     <div className="container">
@@ -42,10 +42,10 @@ const Student = () => {
             <label for="name">Admission number</label>
             <input type="number" id="admno" name="adm_no" value={formdata.adm_no} onChange={handleChange}/>
 
-            <label for="name">Course_id</label>
+            <label for="name">Course ID</label>
             <input type="number" id="course" name="course_id" value={formdata.course_id} onChange={handleChange}/>
 
-            <label for="name">Class name</label>
+            <label for="name">Course name</label>
             <input type="text" id="class" name="class_name" value={formdata.class_name} onChange={handleChange}/>
 
             <label for="name">Email</label>
@@ -53,6 +53,7 @@ const Student = () => {
 
             <button id="btn" type="submit">Register Student</button>
         </form>
+    </div>
     </div>
     </div>
     
