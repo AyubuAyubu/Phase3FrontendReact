@@ -3,10 +3,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Student from "./pages/Student";
-import Course from "./pages/Course";
-import EditStudentRecord from "./pages/EditStudentRecord";
+import Course from "./pages/course/Course";
 
 
 
@@ -35,3 +34,5 @@ const App = () => {
 };
 
 export default App;
+
+
