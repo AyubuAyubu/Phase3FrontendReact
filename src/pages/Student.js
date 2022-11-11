@@ -15,21 +15,27 @@ const Student = () => {
   }
   function handleSubmit(e){
     e.preventDefault();
-    e.target.reset();
+
     // console.log(JSON.stringify(formdata))
-    fetch('http://localhost:9292/students',
-      {
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json",
-          "Application":"application/json"
-        },
-        body:JSON.stringify(formdata)
-}
+    fetch("http://localhost:9292/students", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Application: "application/json",
+      },
+      body: JSON.stringify(formdata),
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        setFormData({
+          name: "",
+          adm_no: "",
+          course_id: "",
+          class_name: "",
+          email: "",
+        })
       )
-      .then(res=>res.json())
-      .then(data=>console.log(data))
-      .catch(console.error)
+      .catch(console.error);
 
   }
 
