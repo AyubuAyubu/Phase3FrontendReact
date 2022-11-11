@@ -56,7 +56,7 @@ main{
     border: solid black;
     margin-top: 5%;
     width: 50%;
-    height: 80%;
+    height: 100%;
     background: white;
     padding-left: 4%;
     padding-right: 5%;
@@ -106,7 +106,7 @@ main{
     border: solid white;
     width: 95%;
     height: 95%;
-   
+
     background-image: url("https://images.unsplash.com/photo-1503676593575-d732ab11be71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1477&q=80");
   }
   .studentbackground2{

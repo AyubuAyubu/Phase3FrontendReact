@@ -14,7 +14,8 @@ const Student = () => {
     setFormData({...formdata, [e.target.name]:e.target.value})
   }
   function handleSubmit(e){
-    e.preventDefault()
+    e.preventDefault();
+    e.target.reset();
     // console.log(JSON.stringify(formdata))
     fetch('http://localhost:9292/students',
       {
@@ -56,7 +57,7 @@ const Student = () => {
     </div>
     </div>
     </div>
-    
+
   );
 };
 export default Student;
