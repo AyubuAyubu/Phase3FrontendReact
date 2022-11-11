@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/home/Home";
 import Student from "./pages/Student";
 import Course from "./pages/course/Course";
+import EditStudentRecord from "./pages/EditStudentRecord"
 
 
 
