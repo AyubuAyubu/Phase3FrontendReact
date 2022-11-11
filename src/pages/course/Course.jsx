@@ -14,7 +14,6 @@ const Course = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    e.target.reset();
     // console.log(JSON.stringify(formdata))
     fetch("http://localhost:9292/courses", {
       method: "POST",
@@ -27,7 +26,9 @@ const Course = () => {
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch(console.error);
+      
   }
+
   return (
     <div className="studentbackground">
       <div className="form">

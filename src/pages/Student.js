@@ -30,7 +30,9 @@ const Student = () => {
       .then(res=>res.json())
       .then(data=>console.log(data))
       .catch(console.error)
+
   }
+
   return (
     <div className="studentbackground">
     <div className="form">
@@ -46,7 +48,7 @@ const Student = () => {
             <label for="name">Course ID</label>
             <input type="number" id="course" name="course_id" value={formdata.course_id} onChange={handleChange}/>
 
-            <label for="name">Course name</label>
+            <label for="name">Class name</label>
             <input type="text" id="class" name="class_name" value={formdata.class_name} onChange={handleChange}/>
 
             <label for="name">Email</label>
