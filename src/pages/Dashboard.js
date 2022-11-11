@@ -9,13 +9,13 @@ const Dashboard = ({students}) => {
     fetch(`http://localhost:9292/students/${id}`,
       {
         method:"DELETE",
-      
+
 }
       )
       .then(res=>res.json())
       .then(()=>alert("deleted"))
       .catch(console.error)
-  
+
   }
   return (
     <div className="ml-10">
@@ -30,7 +30,7 @@ const Dashboard = ({students}) => {
           <th>Edit</th>
           <th>Delete</th>
         </tr>
-     
+
           {students.map((a,index)=>{
             return(
               <tr>
